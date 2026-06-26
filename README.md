@@ -48,6 +48,29 @@ AWS, SQL, and Power BI.
   handful of vendors is statistically anomalous compared to 
   typical DoD contracting patterns  
 
+## K-Means Clustering Model
+
+**Algorithm:** K-Means Clustering (unsupervised ML)  
+**Purpose:** Discover natural vendor spending tiers  
+**Training data:** 4,097,532 contracts, 3 features  
+**Optimal K:** 3 (determined by Elbow Method)
+
+![Elbow Curve](Screenshots/06_elbow_curve.png)
+
+### Cluster Findings
+
+| Cluster | Label | Contracts | Total Spending | Avg Contract |
+|---|---|---|---|---|
+| 0 | Support & Logistics | 1,397,968 | $40.4B | $28,929 |
+| 1 | Supply Chain | 2,376,240 | $38.8B | $16,324 |
+| 2 | Weapons & Defense | 323,324 | $405.1B | $1,252,943 |
+
+**Key finding:** Just 7.9% of contracts (Cluster 2 — Weapons & Defense) 
+account for **83.5% of all DoD spending** — dominated by Lockheed Martin, 
+Raytheon, Boeing and Electric Boat.
+
+![K-Means Clusters](Screenshots/07_kmeans_clusters.png)  
+
 ## Tools & Technologies
 - **Python** (Pandas, NumPy) - data cleaning and analysis
 - **AWS S3** - cloud storage for processed data (1.0 GB)
