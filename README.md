@@ -21,6 +21,21 @@ AWS, SQL, and Power BI.
 **Algorithm:** Isolation Forest (unsupervised ML)  
 **Purpose:** Detect statistically unusual contract awards  
 **Training data:** 4,097,532 contracts, 3 features  
+**Contamination rate:** 1%
+
+### Model Findings
+- **40,952 contracts** flagged as anomalies (1% of total)
+- **Largest single anomaly:** $14.1 billion — Lockheed Martin, Department of the Navy
+- **Top anomalous vendor:** Lockheed Martin — consistent with concentration findings
+- Model confirms extreme contract concentration is statistically anomalous
+
+![Anomaly Detection Chart](Screenshots/05_anomaly_detection.png)  
+
+## Anomaly Detection Model
+
+**Algorithm:** Isolation Forest (unsupervised ML)  
+**Purpose:** Detect statistically unusual contract awards  
+**Training data:** 4,097,532 contracts, 3 features  
 **Contamination rate:** 1% (industry standard starting point)
 
 ### Model Findings
